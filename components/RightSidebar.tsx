@@ -12,10 +12,10 @@ export default function RightSidebar() {
   const isSubComponent = pathname.split("/").length > 2;
 
   const sidebar = (
-    <ScrollArea className="my-4 lg:w-60 lg:min-w-60 w-32 min-w-32 md:w-48 md:min-w-48 max-h-screen ">
+    <ScrollArea className="my-4 max-h-screen w-32 min-w-32 md:w-48 md:min-w-48 lg:w-60 lg:min-w-60">
       {isSubComponent && (
         <>
-          <div className="space-y-4 flex flex-col items-center">{/* <Link href="#examples">Examples</Link> */}</div>
+          <div className="flex flex-col items-center space-y-4">{/* <Link href="#examples">Examples</Link> */}</div>
           <ScrollBar orientation="vertical" />
         </>
       )}

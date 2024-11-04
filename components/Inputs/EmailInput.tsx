@@ -1,8 +1,13 @@
+"use client";
+
+import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
-export type EmailInputProps = React.InputHTMLAttributes<HTMLInputElement>;
+export type EmailInputProps = {
+  className?: string;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
-export default function EmailInput({ ...props }: EmailInputProps) {
+export default function EmailInput({ className, ...props }: EmailInputProps) {
   const [email, setEmail] = useState("");
   const [isValid, setIsValid] = useState(true);
 
@@ -18,19 +23,27 @@ export default function EmailInput({ ...props }: EmailInputProps) {
   }
 
   return (
-    <>
+    <div className="relative">
+      {!isValid && <p className="absolute -bottom-6 text-sm text-red-500 dark:text-red-400">Please enter a valid email address</p>}
       <input
-        id="email-input"
         type="email"
-        placeholder="Enter your email..."
+        id="email"
         value={email}
         onChange={handleChange}
-        className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-sm placeholder-gray-400 shadow-sm focus:outline-none focus:ring-1 ${
-          isValid ? "border-gray-300 focus:border-sky-500 focus:ring-sky-500" : "border-red-500 focus:border-red-500 focus:ring-red-500"
-        }`}
+        className={cn(
+          "w-full rounded-md border px-3 py-2 shadow-sm",
+          "bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100",
+          "border-gray-300 dark:border-gray-600",
+          "placeholder-gray-400 dark:placeholder-gray-500",
+          "focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500",
+          isValid ? "" : "border-red-300 focus:border-red-500 focus:ring-red-500 dark:border-red-600",
+          className,
+        )}
+        placeholder="you@example.com"
+        aria-invalid={!isValid ? "true" : "false"}
+        aria-describedby={!isValid ? "email-error" : undefined}
         {...props}
       />
-      {!isValid && <p className="text-sm text-red-500">Please enter a valid email address</p>}
-    </>
+    </div>
   );
 }

@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Command, CommandDialog, CommandInput, CommandList, CommandItem, CommandEmpty, CommandGroup } from "@/components/ui/command";
 import { Input } from "./ui/input";
-import { buttons } from "@/lib/const";
+import { buttons, inputs } from "@/lib/const";
+import { DialogTitle } from "./ui/dialog";
 
 const componentsList = [
   {
@@ -14,25 +15,35 @@ const componentsList = [
   },
   ...Object.entries(buttons).map(([key, value]) => ({
     id: key,
-    title: value.test,
-    path: `/buttons/${key}`,
+    title: value.name,
+    path: `${value.link}`,
+  })),
+  {
+    id: "inputs",
+    title: "Inputs",
+    path: "/inputs",
+  },
+  ...Object.entries(inputs).map(([key, value]) => ({
+    id: key,
+    title: value.name,
+    path: `${value.link}`,
   })),
 ];
 
 export default function Search() {
   const [query, setQuery] = useState("");
-  const [isOpen, setIsOpen] = useState(false); // State to manage dialog open/close
+  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
-  const filteredResults = componentsList.filter((component) => component.title.toLowerCase().includes(query.toLowerCase()));
+  const filteredResults = componentsList.filter((component) => component?.title?.toLowerCase().includes(query.trim().toLowerCase()));
 
   function handleSelect(path: string) {
     router.push(path);
+    setQuery("");
     setIsOpen(false);
   }
 
   function handleClose() {
-    // clear the search input
     setQuery("");
     setIsOpen(false);
   }
@@ -54,11 +65,12 @@ export default function Search() {
           else setIsOpen(true);
         }}
       >
+        <DialogTitle />
         <CommandInput value={query} onValueChange={(value) => setQuery(value)} placeholder="Search Components..." />
         <CommandList>
           {filteredResults.length === 0 && <CommandEmpty>No results found.</CommandEmpty>}
           {filteredResults.map((result) => (
-            <CommandItem key={result.id} onSelect={() => handleSelect(result.path)} className="cursor-pointer">
+            <CommandItem key={result.id + result.title} onSelect={() => handleSelect(result.path)} className="cursor-pointer">
               <span className="pl-2">{result.title}</span>
             </CommandItem>
           ))}

@@ -1,20 +1,3 @@
-import CenterFillButton, { CenterFillButtonCode, CenterFillButtonVariations } from "@/components/Buttons/CenterFillButton";
-import Button3D, { Button3DCode, Button3DVariations } from "@/components/Buttons/Button3D";
-import BorderFollowButton, { BorderFollowButtonCode, BorderFollowButtonVariations } from "@/components/Buttons/BorderFollowButton";
-import FillButton, { FillButtonCode, FillButtonVariations } from "@/components/Buttons/FillButton";
-import GradientButton, { GradientButtonCode, GradientButtonVariations } from "@/components/Buttons/GradientButton";
-import HoverRingButton from "@/components/Buttons/HoverRingButton";
-import { HoverRingButtonCode } from "@/components/Buttons/HoverRingButton";
-import { HoverRingButtonVariations } from "@/components/Buttons/HoverRingButton";
-import WaveButton, { WaveButtonCode, WaveButtonVariations } from "@/components/Buttons/WaveButton";
-import SpotlightButton, { SpotlightButtonVariations, SpotlightButtonCode } from "@/components/Buttons/SpotLight";
-import PulsatingButton, { PulsatingButtonCode, PulsatingButtonVariations } from "@/components/Buttons/PulsatingButton";
-import LeanButton, { LeanButtonCode, LeanButtonVariations } from "@/components/Buttons/LeanButton";
-import TextInput from "@/components/Inputs/TextInput";
-import PasswordInput from "@/components/Inputs/PasswordInput";
-import EmailInput from "@/components/Inputs/EmailInput";
-import NumberInput from "@/components/Inputs/AdvancedNumberInput";
-
 export const packageManagers = [
   { name: "npm", command: "npm i" },
   { name: "bun", command: "bun add" },
@@ -25,135 +8,121 @@ export const packageManagers = [
 
 export type PackageManager = (typeof packageManagers)[number];
 
-type ButtonProps = {
-  [key: string]: {
-    component: React.ComponentType<any>;
-    code: string;
-    props: any;
-    test: string;
-    variations: { label: string; props: any }[];
-    dependencies: string[];
-  };
-};
+export const buttons = [
+  { filename: "BorderFollowButton", name: "Border Follow", link: "/buttons/border-follow-button", variations: [{ label: "Default", props: {} }] },
+  {
+    filename: "Button3D",
+    name: "3D Button",
+    link: "/buttons/3d-button",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Rounded", props: { className: "rounded-full" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "CenterFillButton",
+    name: "Center Fill",
+    link: "/buttons/center-fill-button",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Reverse", props: { mode: "reverse" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "FillButton",
+    name: "Fill Button",
+    link: "/buttons/fill-button",
+    variations: [
+      { label: "Left", props: { direction: "left" } },
+      { label: "Right", props: { direction: "right" } },
+      { label: "Top", props: { direction: "top" } },
+      { label: "Bottom", props: { direction: "bottom" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "GradientButton",
+    name: "Gradient",
+    link: "/buttons/gradient-button",
+    variations: [
+      { label: "Left to Right", props: { direction: "bg-gradient-to-r", from: "from-indigo-900", to: "to-blue-500" } },
+      { label: "From-Via-To", props: { from: "from-indigo-900", via: "via-blue-500", to: "to-pink-500" } },
+      { label: "Top to Bottom", props: { direction: "bg-gradient-to-b", from: "from-green-800", to: "to-green-500" } },
+      { label: "Top Left to Bottom Right", props: { direction: "bg-gradient-to-br", from: "from-orange-700", to: "to-pink-900" } },
+    ],
+    dependencies: [],
+  },
+  { filename: "HoverRingButton", name: "Hover Ring", link: "/buttons/hover-ring-button", variations: [{ label: "Default", props: {} }] },
+  {
+    filename: "LeanButton",
+    name: "Lean",
+    link: "/buttons/lean-button",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Lean Left", props: { direction: "left" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "LineButton",
+    name: "Hover Line",
+    link: "/buttons/line-button",
+    variations: [
+      { label: "Bottom Left", props: { direction: "left", position: "bottom" } },
+      { label: "Bottom Right", props: { direction: "right", position: "bottom" } },
+      { label: "Bottom Center", props: { direction: "center", position: "bottom" } },
+      { label: "Top Left", props: { direction: "left", position: "top" } },
+      { label: "Top Right", props: { direction: "right", position: "top" } },
+      { label: "Top Center", props: { direction: "center", position: "top" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "PulsatingButton",
+    name: "Pulsating",
+    link: "/buttons/pulsating-button",
+    variations: [
+      { label: "Default", props: { speed: "slow" } },
+      { label: "Fast", props: { speed: "fast" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "SpotlightButton",
+    name: "Spotlight",
+    link: "/buttons/spotlight-button",
+    variations: [{ label: "Default", props: {} }],
+    dependencies: [],
+  },
+  {
+    filename: "WaveButton",
+    name: "Wave",
+    link: "/buttons/wave-button",
+    variations: [
+      { label: "Default", props: { speed: "slow" } },
+      { label: "Fast", props: { speed: "fast" } },
+    ],
+    dependencies: [],
+  },
+];
 
-export const buttons: ButtonProps = {
-  "3d-button": {
-    component: Button3D,
-    code: Button3DCode,
-    props: {},
-    test: "3D Button",
-    variations: Button3DVariations,
-    dependencies: [],
-  },
-  "center-fill-button": {
-    component: CenterFillButton,
-    code: CenterFillButtonCode,
-    props: {},
-    test: "Center Fill",
-    variations: CenterFillButtonVariations,
-    dependencies: [],
-  },
-  "border-follow-button": {
-    component: BorderFollowButton,
-    code: BorderFollowButtonCode,
-    props: {},
-    test: "Border Follow",
-    variations: BorderFollowButtonVariations,
-    dependencies: [],
-  },
-  "fill-button": {
-    component: FillButton,
-    code: FillButtonCode,
-    props: {},
-    test: "Fill Button",
-    variations: FillButtonVariations,
-    dependencies: [],
-  },
-  "gradient-button": {
-    component: GradientButton,
-    code: GradientButtonCode,
-    props: { from: "from-purple-700", to: "to-indigo-500" },
-    test: "Gradient",
-    variations: GradientButtonVariations,
-    dependencies: [],
-  },
-  "hover-ring-button": {
-    component: HoverRingButton,
-    code: HoverRingButtonCode,
-    props: {},
-    test: "Hover Ring",
-    variations: HoverRingButtonVariations,
-    dependencies: [],
-  },
-  "Wave-button": {
-    component: WaveButton,
-    code: WaveButtonCode,
-    props: {},
-    test: "Wave",
-    variations: WaveButtonVariations,
-    dependencies: [],
-  },
-  "spotlight-button": {
-    component: SpotlightButton,
-    code: SpotlightButtonCode,
-    props: {},
-    test: "Spotlight",
-    variations: SpotlightButtonVariations,
-    dependencies: [],
-  },
-  "wave-button": {
-    component: WaveButton,
-    code: WaveButtonCode,
-    props: {},
-    test: "Wave",
-    variations: WaveButtonVariations,
-    dependencies: [],
-  },
-  "pulsating-button": {
-    component: PulsatingButton,
-    code: PulsatingButtonCode,
-    props: {},
-    test: "Pulsating",
-    variations: PulsatingButtonVariations,
-    dependencies: [],
-  },
-  "lean-button": {
-    component: LeanButton,
-    code: LeanButtonCode,
-    props: {},
-    test: "Lean",
-    variations: LeanButtonVariations,
-    dependencies: [],
-  },
-};
+export const inputs = [
+  { filename: "TextInput", name: "Text", link: "/inputs/text-input" },
 
-type InputProps = {
-  [key: string]: {
-    component: React.ComponentType<any>;
-    props: any;
-    test: string;
-  };
-};
-
-export const inputs: InputProps = {
-  "text-input": {
-    component: TextInput,
-    props: { placeholder: "Text Input" },
-    test: "Text Input",
+  { filename: "EmailInput", name: "Email", link: "/inputs/email-input" },
+  {
+    filename: "PasswordInput",
+    name: "Password",
+    link: "/inputs/password-input",
+    dependencies: ["lucide-react"],
   },
-  "password-input": {
-    component: PasswordInput,
-    props: { placeholder: "Password Input" },
-    test: "Password Input",
+  { filename: "LimitedTextInput", name: "Limited Text", link: "/inputs/limited-text-input" },
+  {
+    filename: "TextAreaInput",
+    name: "Textarea",
+    link: "/inputs/textarea-input",
   },
-  "email-input": {
-    component: EmailInput,
-    props: { placeholder: "Email Input" },
-    test: "Email Input",
-  },
-  "number-input": {
-    component: NumberInput,
-    props: { placeholder: "Number Input" },
-    test: "Number Input",
-  },
-};
+  { filename: "AutoGrowTextArea", name: "Auto Grow Textarea", link: "/inputs/auto-grow-textarea" },
+];
