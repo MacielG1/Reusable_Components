@@ -109,12 +109,11 @@ export const buttons = [
 ];
 
 export const inputs = [
-  { filename: "TextInput", name: "Text", link: "/inputs/text-input" },
-
-  { filename: "EmailInput", name: "Email", link: "/inputs/email-input" },
+  { filename: "TextInput", name: "Text Input", link: "/inputs/text-input" },
+  { filename: "EmailInput", name: "Email Input", link: "/inputs/email-input" },
   {
     filename: "PasswordInput",
-    name: "Password",
+    name: "Password Input",
     link: "/inputs/password-input",
     dependencies: ["lucide-react"],
   },
@@ -125,4 +124,24 @@ export const inputs = [
     link: "/inputs/textarea-input",
   },
   { filename: "AutoGrowTextArea", name: "Auto Grow Textarea", link: "/inputs/auto-grow-textarea" },
+  {
+    filename: "SearchInput",
+    name: "Search Input",
+    link: "/inputs/search-input",
+    dependencies: ["lucide-react"],
+  },
+  {
+    filename: "NumberInput",
+    name: "Number Input",
+    link: "/inputs/number-input",
+    dependencies: ["lucide-react"],
+  },
+  { filename: "ColorInput", name: "Color Input", link: "/inputs/color-input" },
+  { filename: "RangeInput", name: "Range Input", link: "/inputs/range-input" },
+  {
+    filename: "DateInput",
+    name: "Date Input",
+    link: "/inputs/date-input",
+    dependencies: ["lucide-react"],
+  },
 ];

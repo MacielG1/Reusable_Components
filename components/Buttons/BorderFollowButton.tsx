@@ -32,7 +32,7 @@ export default function BorderFollowButton({ children, className, ...props }: Bo
 
   return (
     <button
-      className="relative select-none items-center justify-center overflow-hidden whitespace-nowrap rounded-lg bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-4 dark:bg-neutral-800 dark:focus-visible:ring-offset-black"
+      className="relative select-none items-center justify-center overflow-hidden whitespace-nowrap rounded-lg bg-neutral-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-4 dark:bg-neutral-800 dark:focus-visible:ring-offset-black"
       ref={ref}
       {...props}
     >
@@ -42,7 +42,7 @@ export default function BorderFollowButton({ children, className, ...props }: Bo
       />
       <div
         className={cn(
-          `relative z-10 m-0.5 rounded-[calc(0.5rem-1px)] bg-neutral-900 px-4 py-3 font-semibold text-indigo-700 backdrop-blur-sm`,
+          `relative z-10 m-0.5 rounded-[calc(0.5rem-1px)] bg-neutral-100 px-4 py-3 font-semibold text-indigo-700 backdrop-blur-sm dark:bg-neutral-900`,
           className,
         )}
       >

@@ -20,7 +20,7 @@ export default async function ShowComponent({ source, componentName, className, 
 
   return (
     <div className={cn("group/item relative", className)}>
-      {name && <div className="text-neutral-300">{name}</div>}
+      {name && <div className="font-semibold text-neutral-500 dark:text-neutral-300">{name}</div>}
       <div className="flex min-h-16 items-center justify-center">
         <Component>{children}</Component>
       </div>

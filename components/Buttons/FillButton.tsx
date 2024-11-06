@@ -17,7 +17,7 @@ export default function FillButton({ children, className, direction = "left", ..
   return (
     <button
       className={cn(
-        "group relative inline-block select-none overflow-hidden whitespace-nowrap border border-indigo-600 px-6 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-[6px] dark:focus-visible:ring-offset-black",
+        "group relative inline-block select-none overflow-hidden whitespace-nowrap border border-indigo-600 px-6 py-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-[6px] dark:focus-visible:ring-offset-black",
         className,
       )}
       {...props}
