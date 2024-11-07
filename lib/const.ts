@@ -9,7 +9,7 @@ export const packageManagers = [
 export type PackageManager = (typeof packageManagers)[number];
 
 export const buttons = [
-  { filename: "BorderFollowButton", name: "Border Follow", link: "/buttons/border-follow-button", variations: [{ label: "Default", props: {} }] },
+  { filename: "FollowBorderButton", name: "Follow Border", link: "/buttons/follow-border-button", variations: [{ label: "Default", props: {} }] },
   {
     filename: "Button3D",
     name: "3D Button",
@@ -106,6 +106,13 @@ export const buttons = [
     ],
     dependencies: [],
   },
+  {
+    filename: "BorderAnimatedButton",
+    name: "Border Animated",
+    link: "/buttons/border-animated-button",
+    variations: [{ label: "Default", props: {} }],
+    dependencies: [],
+  },
 ];
 
 export const inputs = [
@@ -144,4 +151,5 @@ export const inputs = [
     link: "/inputs/date-input",
     dependencies: ["lucide-react"],
   },
+  { filename: "FollowBorderInput", name: "Follow Border Input", link: "/inputs/follow-border-input" },
 ];

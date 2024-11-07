@@ -1,6 +1,7 @@
 import Link from "next/link";
-import BorderFollowButton from "@/components/Buttons/BorderFollowButton";
+import FollowBorderButton from "@/components/Buttons/FollowBorderButton";
 import TextAreaInput from "@/components/Inputs/TextAreaInput";
+import BorderAnimatedButton from "@/components/Buttons/BorderAnimatedButton";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
                 <h2 className="mx-auto mb-4 text-xl font-semibold">Buttons</h2>
                 <div className="flex flex-1 items-center justify-center">
                   <div className="pointer-events-none">
-                    <BorderFollowButton>Border Follow</BorderFollowButton>
+                    <FollowBorderButton>Border Follow</FollowBorderButton>
                   </div>
                 </div>
               </div>
