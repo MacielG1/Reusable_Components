@@ -97,12 +97,14 @@ export const buttons = [
     dependencies: [],
   },
   {
-    filename: "WaveButton",
-    name: "Wave",
-    link: "/buttons/wave-button",
+    filename: "ShimmerButton",
+    name: "Shimmer",
+    link: "/buttons/shimmer-button",
     variations: [
-      { label: "Default", props: { speed: "slow" } },
+      { label: "Default", props: {} },
       { label: "Fast", props: { speed: "fast" } },
+      { label: "Reverse", props: { direction: "reverse" } },
+      { label: "Reverse Fast", props: { speed: "fast", direction: "reverse" } },
     ],
     dependencies: [],
   },
@@ -110,7 +112,10 @@ export const buttons = [
     filename: "BorderAnimatedButton",
     name: "Border Animated",
     link: "/buttons/border-animated-button",
-    variations: [{ label: "Default", props: {} }],
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Counterclockwise", props: { direction: "counterclockwise" } },
+    ],
     dependencies: [],
   },
 ];
