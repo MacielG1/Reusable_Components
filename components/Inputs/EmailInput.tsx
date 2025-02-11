@@ -31,11 +31,11 @@ export default function EmailInput({ className, ...props }: EmailInputProps) {
         value={email}
         onChange={handleChange}
         className={cn(
-          "w-full rounded-md border px-3 py-2 shadow-sm",
+          "w-full rounded-md border px-3 py-2 shadow-xs",
           "bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100",
           "border-gray-300 dark:border-gray-600",
           "placeholder-gray-400 dark:placeholder-gray-500",
-          "focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500",
+          "focus:border-blue-500 focus:outline-hidden focus:ring-1 focus:ring-blue-500",
           isValid ? "" : "border-red-300 focus:border-red-500 focus:ring-red-500 dark:border-red-600",
           className,
         )}

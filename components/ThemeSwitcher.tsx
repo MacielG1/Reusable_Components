@@ -16,7 +16,7 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <button onClick={toggleTheme} className="min-w-6 focus:outline-none">
+    <button onClick={toggleTheme} className="min-w-6 cursor-pointer focus:outline-hidden">
       {mounted && (theme === "light" ? <Sun /> : <Moon />)}
     </button>
   );

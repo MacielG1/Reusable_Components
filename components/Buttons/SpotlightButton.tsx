@@ -37,7 +37,7 @@ export default function SpotlightButton({ children, className, ...props }: Spotl
     <button
       ref={buttonRef}
       className={cn(
-        "relative overflow-hidden rounded-lg bg-red-600 px-4 py-3 font-bold text-white transition-colors duration-300 hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-4 dark:focus-visible:ring-offset-black",
+        "relative cursor-pointer overflow-hidden rounded-lg bg-red-600 px-4 py-3 font-bold text-white transition-colors duration-300 hover:bg-red-700 focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-4 focus-visible:outline-hidden dark:focus-visible:ring-offset-black",
         className,
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -50,7 +50,7 @@ export default function SpotlightButton({ children, className, ...props }: Spotl
           className="absolute inset-0 transition-opacity duration-300 ease-in-out"
           style={{
             opacity: isHovered ? 1 : 0,
-            background: `radial-gradient(circle 4rem at ${position.x}px ${position.y}px, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%)`,
+            background: `radial-gradient(circle 4rem at ${position.x}px ${position.y}px, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 50%)`,
           }}
         />
       )}

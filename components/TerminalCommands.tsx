@@ -50,7 +50,7 @@ export default function TerminalCommands({ packages, className, inline = true }:
       <div className={`flex ${inline ? "w-auto" : "w-full"} justify-between gap-2 items-center`}>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="w-32 flex-grow">
+            <Button variant="outline" className="w-32 grow">
               <Terminal className="mr-2 h-4 w-4" />
               {selectedManager?.name}
               <ChevronDown className="ml-auto h-4 w-4" />

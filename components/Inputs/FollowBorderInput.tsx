@@ -52,9 +52,19 @@ export default function FollowBorderInput({
       onMouseLeave={() => setIsActive(false)}
       style={{ "--border-radius": `${borderRadius}px` } as React.CSSProperties}
     >
-      <div className="pointer-events-none absolute inset-0 rounded-[var(--border-radius)] transition-opacity duration-300" style={gradientStyle}>
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 rounded-[var(--border-radius)] transition-opacity duration-300"
+        style={gradientStyle}
+      >
         <div className="h-full w-full rounded-[calc(var(--border-radius)-2px)] bg-white dark:bg-gray-800" />
       </div>
+
+      <div
+        className={cn(
+          "pointer-events-none absolute inset-0 -z-20 rounded-[var(--border-radius)] transition-all duration-200",
+          isActive ? "bg-neutral-200 dark:bg-gray-700" : "bg-white dark:bg-gray-800",
+        )}
+      />
 
       <input
         {...props}
@@ -62,11 +72,11 @@ export default function FollowBorderInput({
         onFocus={() => setIsActive(true)}
         onBlur={() => setIsActive(false)}
         className={cn(
-          "h-full w-full rounded-[var(--border-radius)] border border-gray-300",
-          "bg-white px-3 py-2 dark:bg-gray-800",
+          "relative h-full w-full rounded-[var(--border-radius)] border border-gray-300",
+          "bg-transparent px-3 py-2",
           "text-gray-900 placeholder-gray-400 dark:text-gray-100 dark:placeholder-gray-500",
-          "transition-colors duration-200 focus:outline-none dark:border-gray-600",
-          isActive && "bg-neutral-200 dark:border-transparent",
+          "transition-colors duration-200 focus:outline-hidden dark:border-gray-600",
+          isActive && "dark:border-transparent",
           className,
         )}
       />

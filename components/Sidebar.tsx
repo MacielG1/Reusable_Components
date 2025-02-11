@@ -24,6 +24,9 @@ export default function Sidebar() {
         <Link href="/inputs" className="w-24 text-left">
           Inputs
         </Link>
+        <Link href="/switches" className="w-24 text-left">
+          Switches
+        </Link>
       </div>
       <ScrollBar orientation="vertical" />
     </ScrollArea>

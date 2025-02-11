@@ -91,7 +91,7 @@ export default function NumberInput({ className, min = 0, max = 100, step = 1, d
         onMouseLeave={stopTimer}
         onTouchStart={() => startTimer(false)}
         onTouchEnd={stopTimer}
-        className="flex h-full w-10 items-center justify-center border-r border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700"
+        className="flex h-full w-10 cursor-pointer items-center justify-center border-r border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700"
       >
         <Minus className="h-3 w-3 text-gray-500 dark:text-gray-400" />
       </button>
@@ -100,9 +100,9 @@ export default function NumberInput({ className, min = 0, max = 100, step = 1, d
         value={value}
         onChange={(e) => handleChange(Number(e.target.value))}
         className={cn(
-          "h-full w-14 border-none bg-transparent px-2 text-center text-sm [appearance:textfield]",
+          "h-full w-14 [appearance:textfield] border-none bg-transparent px-2 text-center text-sm",
           "[&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none",
-          "focus:outline-none focus:ring-0",
+          "focus:ring-0 focus:outline-hidden",
           "dark:text-gray-100",
           className,
         )}
@@ -118,7 +118,7 @@ export default function NumberInput({ className, min = 0, max = 100, step = 1, d
         onMouseLeave={stopTimer}
         onTouchStart={() => startTimer(true)}
         onTouchEnd={stopTimer}
-        className="flex h-full w-10 items-center justify-center border-l border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700"
+        className="flex h-full w-10 cursor-pointer items-center justify-center border-l border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700"
       >
         <Plus className="h-3 w-3 text-gray-500 dark:text-gray-400" />
       </button>

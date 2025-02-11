@@ -10,7 +10,7 @@ export default function PulsatingButton({ children, className, speed = "slow", .
   return (
     <button
       className={cn(
-        "rounded-lg bg-blue-700 p-4 font-semibold text-white shadow-lg focus-visible:outline focus-visible:outline-[6px] focus-visible:outline-neutral-700 dark:focus-visible:outline-neutral-800",
+        "cursor-pointer rounded-lg bg-blue-700 p-4 font-semibold text-white shadow-lg focus-visible:outline focus-visible:outline-neutral-700 dark:focus-visible:outline-neutral-800",
         className,
       )}
       style={{ animation: `pulsate ${speed === "fast" ? "1s" : "2s"} infinite` }}

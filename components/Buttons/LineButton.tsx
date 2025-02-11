@@ -19,7 +19,7 @@ export default function LineButton({ children, className, direction = "left", po
   return (
     <button
       className={cn(
-        "group relative w-max text-base font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-[6px] dark:focus-visible:ring-offset-black",
+        "group relative w-max cursor-pointer text-base font-semibold focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-[6px] focus-visible:outline-hidden dark:focus-visible:ring-offset-black",
         className,
       )}
       {...props}

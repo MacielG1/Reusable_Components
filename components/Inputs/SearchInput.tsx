@@ -30,7 +30,7 @@ export default function SearchInput({ className, onSearch, ...props }: SearchInp
           "bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100",
           "border-gray-300 dark:border-gray-600",
           "placeholder-gray-400 dark:placeholder-gray-500",
-          "focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500",
+          "focus:border-sky-500 focus:outline-hidden focus:ring-1 focus:ring-sky-500",
           "dark:focus:border-sky-400 dark:focus:ring-sky-400",
           className,
         )}

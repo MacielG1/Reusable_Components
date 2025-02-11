@@ -158,3 +158,31 @@ export const inputs = [
   },
   { filename: "FollowBorderInput", name: "Follow Border Input", link: "/inputs/follow-border-input" },
 ];
+
+export const switches = [
+  {
+    filename: "ToggleSwitch",
+    name: "Toggle Switch",
+    link: "/switches/toggle-switch",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small", props: { size: "sm" } },
+      { label: "Large", props: { size: "lg" } },
+      { label: "Disabled", props: { disabled: true } },
+    ],
+  },
+  { filename: "WaveSwitch", name: "Wave Switch", link: "/switches/wave-switch" },
+  { filename: "OnOffSwitch", name: "On/Off Switch", link: "/switches/on-off-switch" },
+  { filename: "NeonSwitch", name: "Neon Switch", link: "/switches/neon-switch" },
+  { filename: "FlipSwitch", name: "Flip Switch", link: "/switches/flip-switch" },
+  {
+    filename: "ThemeSwitch",
+    name: "Theme Switch",
+    link: "/switches/theme-switch",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Dark Mode", props: { defaultChecked: true } },
+    ],
+    dependencies: ["lucide-react"],
+  },
+];

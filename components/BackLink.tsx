@@ -18,9 +18,9 @@ export default function BackLink() {
   }
 
   return (
-    <button className="mt-2 inline-flex items-center gap-0.5 flex-nowrap" onClick={handleBack}>
+    <button className="mt-2 inline-flex cursor-pointer flex-nowrap items-center gap-0.5" onClick={handleBack}>
       <ChevronsLeft className="size-6 shrink-0" />
-      <span className="text-base mb-0.5">Back</span>
+      <span className="mb-0.5 text-base">Back</span>
     </button>
   );
 }

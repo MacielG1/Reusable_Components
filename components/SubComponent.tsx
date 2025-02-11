@@ -30,20 +30,20 @@ export default function SubComponent({ componentData, code, source }: Props) {
 
   return (
     <div className="flex h-full w-full flex-col p-4 pb-20">
-      <div className="flex w-full flex-grow flex-col">
-        <Tabs defaultValue="preview" className="flex w-full flex-grow flex-col">
+      <div className="flex w-full grow flex-col">
+        <Tabs defaultValue="preview" className="flex w-full grow flex-col">
           <div className="relative mb-4 flex w-full items-center">
             <div className="absolute left-0">
               <TabsList className="inline-flex h-10 w-fit items-center justify-start rounded-md bg-muted p-1 text-muted-foreground">
                 <TabsTrigger
                   value="preview"
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-xs"
                 >
                   Preview
                 </TabsTrigger>
                 <TabsTrigger
                   value="code"
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-xs"
                 >
                   Code
                 </TabsTrigger>

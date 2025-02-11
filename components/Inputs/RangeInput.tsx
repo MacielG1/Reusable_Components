@@ -31,7 +31,7 @@ export default function RangeInput({ className, showValue = true, min = 0, max =
           "dark:bg-gray-700",
           "[&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4",
           "[&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full",
-          "[&::-webkit-slider-thumb]:bg-sky-500 [&::-webkit-slider-thumb]:dark:bg-sky-400",
+          "[&::-webkit-slider-thumb]:bg-sky-500 dark:[&::-webkit-slider-thumb]:bg-sky-400",
           className,
         )}
         style={{
