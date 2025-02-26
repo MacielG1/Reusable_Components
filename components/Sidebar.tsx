@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { Sheet, SheetContent } from "./ui/sheet";
 import { useState } from "react";
-import { ChevronsRight } from "lucide-react";
+import { ChevronsRight, Power, TextCursorInput, ToggleLeft } from "lucide-react";
 
 export default function Sidebar() {
   const isMobile = useIsMobile();
@@ -16,15 +16,18 @@ export default function Sidebar() {
   }
 
   const sidebar = (
-    <ScrollArea className="my-4 max-h-screen w-24 min-w-24 md:w-32 md:min-w-32 lg:w-48 lg:min-w-48 xl:w-60 xl:min-w-60">
+    <ScrollArea className="my-4 mt-12 max-h-screen w-24 min-w-24 md:w-32 md:min-w-32 lg:w-48 lg:min-w-48 xl:w-60 xl:min-w-60">
       <div className="flex flex-col items-center space-y-4">
-        <Link href="/buttons" className="w-24 text-left">
+        <Link href="/buttons" className="w-24 text-left flex flex-row items-center gap-2 dark:text-neutral-300 dark:hover:text-white text-neutral-800 hover:text-black">
+          <Power className="size-4" />  
           Buttons
         </Link>
-        <Link href="/inputs" className="w-24 text-left">
+        <Link href="/inputs" className="w-24 text-left flex flex-row items-center gap-2 dark:text-neutral-300 dark:hover:text-white text-neutral-800 hover:text-black">
+        <TextCursorInput className="size-4 " />
           Inputs
-        </Link>
-        <Link href="/switches" className="w-24 text-left">
+        </Link> 
+        <Link href="/switches" className="w-24 text-left flex flex-row items-center gap-2 dark:text-neutral-300 dark:hover:text-white text-neutral-800 hover:text-black">
+        <ToggleLeft className="size-4" />
           Switches
         </Link>
       </div>

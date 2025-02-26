@@ -50,7 +50,7 @@ export default function TerminalCommands({ packages, className, inline = true }:
       <div className={`flex ${inline ? "w-auto" : "w-full"} justify-between gap-2 items-center`}>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="w-32 grow">
+            <Button variant="outline" className="w-32 grow cursor-pointer">
               <Terminal className="mr-2 h-4 w-4" />
               {selectedManager?.name}
               <ChevronDown className="ml-auto h-4 w-4" />
@@ -58,7 +58,7 @@ export default function TerminalCommands({ packages, className, inline = true }:
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             {packageManagers.map((manager) => (
-              <DropdownMenuItem key={manager.name} onClick={() => handleManagerSelect(manager)}>
+              <DropdownMenuItem key={manager.name} onClick={() => handleManagerSelect(manager)} className="cursor-pointer">
                 {manager.name}
               </DropdownMenuItem>
             ))}
@@ -71,7 +71,7 @@ export default function TerminalCommands({ packages, className, inline = true }:
           </div>
         )}
 
-        <Button size="icon" variant="outline" onClick={copyToClipboard}>
+        <Button size="icon" variant="outline" onClick={copyToClipboard} className="cursor-pointer">
           {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
           <span className="sr-only">{copied ? "Copied" : "Copy installation command"}</span>
         </Button>

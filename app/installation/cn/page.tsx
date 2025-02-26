@@ -18,7 +18,7 @@ export default function cn() {
       description: (
         <div className="relative">
           <div className="absolute right-[-20] top-[-3] z-10">
-            <CopyButton textToCopy={cnCode} />
+            <CopyButton codyToCopy={cnCode} />
           </div>
           <CodeHighlighter
             code={cnCode}
