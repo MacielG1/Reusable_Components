@@ -186,3 +186,138 @@ export const switches = [
     dependencies: ["lucide-react"],
   },
 ];
+
+export const loaders = [
+  {
+    filename: "SpinnerLoader",
+    name: "Spinner",
+    link: "/loaders/spinner-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "RippleLoader",
+    name: "Ripple Effect",
+    link: "/loaders/ripple-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "BarsLoader",
+    name: "Wave Bars",
+    link: "/loaders/bars-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "SquareLoader",
+    name: "Morphing Square",
+    link: "/loaders/square-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "CircularDotsLoader",
+    name: "Circular Dots",
+    link: "/loaders/circular-dots-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "HourglassLoader",
+    name: "Hourglass",
+    link: "/loaders/hourglass-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "ProgressLoader",
+    name: "Progress Circle",
+    link: "/loaders/progress-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "NewtonLoader",
+    name: "Newton's Cradle",
+    link: "/loaders/newton-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "BouncingDotsLoader",
+    name: "Bouncing Dots",
+    link: "/loaders/bouncing-dots-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "DotsLoader",
+    name: "Spinning Dots",
+    link: "/loaders/dots-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "PulseLoader",
+    name: "Pulse Spinner",
+    link: "/loaders/pulse-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Fast", props: { speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+  {
+    filename: "SpiralLoader",
+    name: "Spiral",
+    link: "/loaders/spiral-loader",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Small Fast", props: { size: "sm", speed: "fast" } },
+      { label: "Large Slow", props: { size: "lg", speed: "slow" } },
+    ],
+    dependencies: [],
+  },
+];

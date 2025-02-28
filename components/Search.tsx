@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Command, CommandDialog, CommandInput, CommandList, CommandItem, CommandEmpty, CommandGroup } from "@/components/ui/command";
 import { Input } from "./ui/input";
-import { buttons, inputs, switches } from "@/lib/const";
+import { buttons, inputs, switches, loaders } from "@/lib/const";
 import { DialogTitle } from "./ui/dialog";
 
 const componentsList = [
@@ -34,6 +34,16 @@ const componentsList = [
     path: "/switches",
   },
   ...Object.entries(switches).map(([key, value]) => ({
+    id: key,
+    title: value.name,
+    path: `${value.link}`,
+  })),
+  {
+    id: "loaders",
+    title: "Loaders",
+    path: "/loaders",
+  },
+  ...Object.entries(loaders).map(([key, value]) => ({
     id: key,
     title: value.name,
     path: `${value.link}`,

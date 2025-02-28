@@ -1,12 +1,3 @@
-# Reusable Components Library
+# Next.js Reusable Components Library
 
-A modern collection of reusable Copy & Paste components built with Tailwind
-
-## Features
-
-- 💎 TypeScript for type safety
-- 🎯 Tailwind CSS for styling
-- 🎨 Modern, responsive design
-- 🌙 Dark mode support
-- 🧩 Copy and paste code
-- 📱 Mobile-friendly
+A collection of reusable Next.js components with easy copy-and-paste integration.

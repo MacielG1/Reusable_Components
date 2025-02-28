@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { Sheet, SheetContent } from "./ui/sheet";
 import { useState } from "react";
-import { ChevronsRight, Power, TextCursorInput, ToggleLeft } from "lucide-react";
+import { ChevronsRight, Power, TextCursorInput, ToggleLeft, Loader } from "lucide-react";
 
 export default function Sidebar() {
   const isMobile = useIsMobile();
@@ -23,13 +23,18 @@ export default function Sidebar() {
           Buttons
         </Link>
         <Link href="/inputs" className="w-24 text-left flex flex-row items-center gap-2 dark:text-neutral-300 dark:hover:text-white text-neutral-800 hover:text-black">
-        <TextCursorInput className="size-4 " />
+          <TextCursorInput className="size-4 " />
           Inputs
         </Link> 
+        <Link href="/loaders" className="w-24 text-left flex flex-row items-center gap-2 dark:text-neutral-300 dark:hover:text-white text-neutral-800 hover:text-black">
+          <Loader className="size-4" />
+          Loaders
+        </Link>
         <Link href="/switches" className="w-24 text-left flex flex-row items-center gap-2 dark:text-neutral-300 dark:hover:text-white text-neutral-800 hover:text-black">
-        <ToggleLeft className="size-4" />
+          <ToggleLeft className="size-4" />
           Switches
         </Link>
+
       </div>
       <ScrollBar orientation="vertical" />
     </ScrollArea>

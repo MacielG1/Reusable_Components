@@ -28,7 +28,7 @@ export default async function ShowComponent({ source, componentName, className, 
         <Link href={href} tabIndex={-1}>
           <Button
             variant="ghost"
-            className="h-auto cursor-pointer p-1.5 py-1.5 text-sm focus-within:ring-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800"
+            className="h-auto bg-neutral-100 dark:bg-neutral-900 cursor-pointer p-1.5 py-1.5 text-sm focus-within:ring-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800"
           >
             <CodeXml className="mr-2 size-4" />
             Source
