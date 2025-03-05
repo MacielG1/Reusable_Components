@@ -20,7 +20,6 @@ export default function DateInput({ className, onChange, ...props }: DateInputPr
 
   return (
     <div className="relative w-full max-w-[300px]">
-      <Calendar className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400 dark:text-gray-500" />
       <input
         type="date"
         value={value}

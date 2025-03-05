@@ -53,7 +53,11 @@ export default function SubComponent({ componentData, code, source }: Props) {
           </div>
           <div className="relative w-full overflow-hidden rounded-md border">
             <TabsContent value="preview" className="inset-0 m-0 flex h-[43vh] max-h-[43vh] items-center justify-center data-[state=inactive]:hidden">
-              {isButtonComponent ? <Component children={componentData.name} /> : <Component />}
+              {isButtonComponent ? (
+                <Component>{componentData.name}</Component>
+              ) : (
+                <Component />
+              )}
             </TabsContent>
             <TabsContent value="code" className="relative inset-0 m-0 h-[43vh] max-h-[43vh] overflow-auto data-[state=inactive]:hidden">
               <div className="absolute right-2 top-2 z-10">

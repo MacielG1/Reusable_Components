@@ -32,14 +32,14 @@ export default function TerminalCommands({ packages, className, inline = true }:
   const getFullCommand = useCallback(() => {
     if (!selectedManager) return "";
     return `${selectedManager.command} ${packages.join(" ")}`;
-  }, [selectedManager, packages]);
+  }, [packages, selectedManager]);
 
   const copyToClipboard = useCallback(async () => {
     if (!selectedManager) return;
     await navigator.clipboard.writeText(getFullCommand());
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  }, [getFullCommand]);
+  }, [getFullCommand, selectedManager]);
 
   if (isLoading) {
     return <div className="h-[92px]" />;

@@ -2,8 +2,9 @@ import SubComponent from "@/components/SubComponent";
 import { buttons, loaders } from "@/lib/const";
 import getComponentCode from "@/lib/getComponentCode";
 
-export default async function Page({ params }: { params: { loader_slug: string } }) {
-  const loaderSlug = (await params).loader_slug;
+export default async function page(props: { params: Promise<{ loader_slug: string }> }) {
+  const params = await props.params;
+  const loaderSlug = params.loader_slug;
 
   const LoaderData = loaders.find((loader) => loader.link === `/loaders/${loaderSlug}`);
 

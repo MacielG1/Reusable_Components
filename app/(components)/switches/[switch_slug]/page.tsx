@@ -2,8 +2,9 @@ import SubComponent from "@/components/SubComponent";
 import { switches } from "@/lib/const";
 import getComponentCode from "@/lib/getComponentCode";
 
-export default async function Page({ params }: { params: { switch_slug: string } }) {
-  const switchSlug = (await params).switch_slug;
+export default async function page(props: { params: Promise<{ switch_slug: string }> }) {
+  const params = await props.params;
+  const switchSlug = params.switch_slug;
 
   const SwitchData = switches.find((switches) => switches.link === `/switches/${switchSlug}`);
 

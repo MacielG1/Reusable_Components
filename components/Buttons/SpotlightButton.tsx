@@ -13,22 +13,23 @@ export default function SpotlightButton({ children, className, ...props }: Spotl
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    const button = buttonRef.current;
     const handleMouseMove = (e: MouseEvent) => {
-      if (!buttonRef.current) return;
-      const rect = buttonRef.current.getBoundingClientRect();
+      if (!button) return;
+      const rect = button.getBoundingClientRect();
       setPosition({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
       });
     };
 
-    if (buttonRef.current) {
-      buttonRef.current.addEventListener("mousemove", handleMouseMove);
+    if (button) {
+      button.addEventListener("mousemove", handleMouseMove);
     }
 
     return () => {
-      if (buttonRef.current) {
-        buttonRef.current.removeEventListener("mousemove", handleMouseMove);
+      if (button) {
+        button.removeEventListener("mousemove", handleMouseMove);
       }
     };
   }, []);

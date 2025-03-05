@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight, oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/cjs/prism";
+import { oneLight, oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { useTheme } from "next-themes";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { cn } from "@/lib/utils";
+
 type CodeHighlighterProps = {
   code: string;
   language?: string;
@@ -14,6 +15,8 @@ type CodeHighlighterProps = {
   wrapLines?: boolean;
   wrapLongLines?: boolean;
 };
+
+const SyntaxHighlighterComponent = SyntaxHighlighter as any;
 
 export default function CodeHighlighter({
   code,
@@ -39,7 +42,7 @@ export default function CodeHighlighter({
 
   return (
     <ScrollArea className="h-full">
-      <SyntaxHighlighter
+      <SyntaxHighlighterComponent
         language={language}
         lineProps={{ style: { wordBreak: "break-all", whiteSpace: "pre-wrap" } }}
         style={codeTheme}
@@ -55,8 +58,8 @@ export default function CodeHighlighter({
         {...props}
       >
         {code}
-      </SyntaxHighlighter>
-      <ScrollBar orientation="vertical" />
+      </SyntaxHighlighterComponent>
+      <ScrollBar orientation="horizontal" />
     </ScrollArea>
   );
 }

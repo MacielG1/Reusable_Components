@@ -160,6 +160,7 @@ export const inputs = [
 ];
 
 export const switches = [
+
   {
     filename: "ToggleSwitch",
     name: "Toggle Switch",
@@ -184,6 +185,24 @@ export const switches = [
       { label: "Dark Mode", props: { defaultChecked: true } },
     ],
     dependencies: ["lucide-react"],
+  },
+  {
+    filename: "LiquidSwitch",
+    name: "Liquid Switch",
+    link: "/switches/liquid-switch",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Active", props: { defaultChecked: true } },
+    ],
+  },
+  {
+    filename: "TextSwitch",
+    name: "Text Switch",
+    link: "/switches/text-switch",
+    variations: [
+      { label: "Default", props: {} },
+      { label: "Active", props: { defaultChecked: true } },
+    ],
   },
 ];
 
