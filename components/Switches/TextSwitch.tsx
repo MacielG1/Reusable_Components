@@ -32,7 +32,6 @@ export default function TextSwitch({ className, defaultChecked = false, onChange
         className
       )}
     >
-      {/* Toggle Button */}
       <div
         className={cn(
           "absolute transition-all duration-300",
@@ -42,7 +41,6 @@ export default function TextSwitch({ className, defaultChecked = false, onChange
         )}
       />
 
-      {/* Glow Effect */}
       <div
         className={cn(
           "absolute inset-[6px] rounded-full bg-blue-400/10 shadow-[0_0_8px] shadow-blue-500/20 transition-opacity duration-700",
@@ -50,7 +48,6 @@ export default function TextSwitch({ className, defaultChecked = false, onChange
         )}
       />
 
-      {/* ON Text */}
       <div
         className={cn(
           "absolute inset-0 flex items-center justify-center text-sm font-medium transition-colors duration-200",
@@ -60,7 +57,6 @@ export default function TextSwitch({ className, defaultChecked = false, onChange
         ON
       </div>
 
-      {/* OFF Text */}
       <div
         className={cn(
           "absolute inset-0 flex items-center justify-end pr-2 text-xs font-medium transition-colors duration-200",

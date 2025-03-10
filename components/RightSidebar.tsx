@@ -1,7 +1,6 @@
 "use client";
 
 import { useIsMobile } from "../hooks/useIsMobile";
-import Link from "next/link";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { usePathname } from "next/navigation";
 

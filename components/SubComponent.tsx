@@ -6,7 +6,7 @@ import CodeHighlighter from "@/components/CodeHighlighter";
 import TerminalCommands from "@/components/TerminalCommands";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CircleAlert, FileWarning } from "lucide-react";
+import {  FileWarning } from "lucide-react";
 
 type Props = {
   code: string;

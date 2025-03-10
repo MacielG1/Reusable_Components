@@ -1,5 +1,3 @@
-import BackLink from "@/components/BackLink";
-import RightSidebar from "@/components/RightSidebar";
 
 export default function ComponentsLayout({
   children,
